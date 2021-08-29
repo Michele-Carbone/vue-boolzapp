@@ -20,42 +20,41 @@
     <!--sfondo sfumato della chat-->
     <div id="app" class="d-flex align-items-center justify-content-center h-100">
         <!--creazione della chat centrata-->
-        <div class="container">
+        <div class="container rounded shadow bg-white">
+            <!--suddivisione in due colonne-->
+            <div class="row h-100">
+                <!--SEZIONE CONTATTI/RUBRICA-->
+                <section id="contacts" class="col-4 bg-gray h-100 p-0 d-flex flex-column">
 
-            <main class="rounded shadow bg-white">
-                <!--suddivisione in due colonne-->
-                <div class="row h-100">
-                    <!--colonna piu piccola con la cronologia delle chat-->
-                    <div id="contacts" class="col-4">
+                    <!--USER-->
+                    <section class="user-section flex-shrink-0 d-flex justify-content-between">
+                        <div>Silvia Rivella</div>
+                    </section>
 
-                        <!--Nome dell utente con di fianco le tre opzioni-->
-                        <!--
-                        <div class="row">
-                            <div class="col-9">
-                                <img src="./assets/img/avatar_io.jpg" alt="" class="m-2"><span class="mx-1">Nome
-                                    utente
-                                </span>
-                            </div>
-                            <div class="col-3">
-                                <i class="fas fa-circle-notch mx-1"></i>
-                                <i class="fas fa-comment-alt mx-1"></i>
-                                <i class="fas fa-ellipsis-v mx-1"></i>
-                            </div>
-                        </div>-->
-                        <!--Segnalatori di notifica-->
-                        <div></div>
-                        <!--Ricerca nelle chat-->
-                        <div></div>
-                        <!--Elenco della cronologia delle chat-->
-                        <div></div>
-                    </div>
+                    <!--NOTIFICHE-->
+                    <section class="notifications flex-shrink-0">
+                        <div>Notifiche</div>
+                    </section>
 
-                    <!--Colonna piu grande per la messaggistica della chat presa in questione-->
-                    <div id="chat" class="col-8 rounded-end">
-                        <!--Nome dell utente con il quale stima messaggiando piu le tre opzioni-->
+                    <!--RICERCA-->
+                    <section class="search p-2">
+                        <div>Cerca</div>
+                    </section>
 
-                        <!--Chat completa con i messaggi scritti al suo interno-->
+                    <!--RUBRICA CHAT-->
+                    <section class="flex-grow-1 overflow-auto bg-white">
+                        <div>Rubrica</div>
+                    </section>
+                </section>
 
+                <!--SEZIONE CHAT-->
+                <section id="chat" class="col-8 rounded-end d-flex flex-column bg-chat-color p-0 h-100">
+                    <!--Nome dell utente con il quale stima messaggiando piu le tre opzioni-->
+                    <header class="bg-gray ">
+                        Pino
+                    </header>
+                    <!--Chat completa con i messaggi scritti al suo interno-->
+                    <main class="flex-grow-1 overflow-auto bg-chat-image">
                         <!--Messaggi sulla sinistra sono quelli che riceviamo dall'utente-->
 
                         <!--Colore della chat bianco con all interno la data-->
@@ -63,12 +62,15 @@
                         <!--Messaggi sulla destra sono quelli che scrive il proprietario della chat-->
 
                         <!--Colore della chat verde con all interno la data-->
+                    </main>
 
-                        <!--Barra nella quale scriviamo il messaggio da inviare con il punsante Enter e le due opzioni vicine-->
-                    </div>
-                </div>
 
-            </main>
+                    <!--Barra nella quale scriviamo il messaggio da inviare con il punsante Enter e le due opzioni vicine-->
+                    <footer class="">
+
+                    </footer>
+                </section>
+            </div>
 
         </div>
     </div>

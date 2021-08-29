@@ -1,29 +1,39 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+/*Utilitis*/
+/** color **/
+
+
+.bg-gray{
+    background-color: darkgrey;
 }
 
-.container{
-    max-width: 1200px;
-    margin: 0 auto;
-}
 
+/*Main*/
 body{
     font-family: sans-serif;
     height: 100vh;
     background-image: linear-gradient(to bottom, #00bfa5 15%, #f0f0f0 15%, #f0f0f0 100%);
 }
 
-main{
-    height: 90vh;
+#app .container{
+    height: 90%;
 }
 
-#chat{
-    background-color: darkgreen;
+
+/** Chat section **/
+.bg-chat-image{
+    background-image: url(../assets/img/mine.jpg);
 }
 
-img{
-    width: 10%;
-    border-radius: 50%;
+
+#chat header,
+#chat footer,
+.user-section{
+    height: 70px;
 }
+
+.notifications{
+    height: 80px;
+    background-color: rgb(4, 174, 253);
+}
+
+

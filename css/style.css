@@ -72,5 +72,29 @@ body{
     border-radius: 50%;
 }
 
+li.user-name:hover{
+    cursor: pointer;
+    background-color: #eaeaea;
+}
+
+
+
+.search{
+    height: 50px;
+    position: relative;
+}
+  
+.search .fa-search{
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+}
+  
+.search input{
+    border: 0;
+    height: 100%;
+    padding-left: 50px;
+}
 
 

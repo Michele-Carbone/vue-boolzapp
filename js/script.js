@@ -4,7 +4,13 @@ Vue.config.devtools = true;
 
 const app = new Vue({
     el: '#app',
-    data: {},
+    data: {
+        user: {
+            name: 'Nuovo Nome',
+            avatar: '_io',
+        },
+        contacts,
+    },
     methods: {},
 });
 

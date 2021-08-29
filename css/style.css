@@ -3,9 +3,16 @@
 
 
 .bg-gray{
-    background-color: darkgrey;
+    background-color: rgb(180, 180, 180);
 }
 
+.bg-chat{
+    background-color: rgb(180, 180, 180);
+}
+
+.clickable{
+    cursor: pointer;
+}
 
 /*Main*/
 body{
@@ -31,11 +38,17 @@ body{
     height: 70px;
 }
 
+
+/*Notifiche*/
+
 .notifications{
     height: 70px;
     background-color: rgb(55, 165, 216);
 }
 
+.notifications i.fas{
+    color: #8edafc;
+}
 
 /*class user-name che ripeto*/
 .user-name{
@@ -77,8 +90,11 @@ li.user-name:hover{
     background-color: #eaeaea;
 }
 
+.user-name .user-name-secondary-text{
+    margin-bottom: 0;
+}
 
-
+/*Cerca*/
 .search{
     height: 50px;
     position: relative;
@@ -97,4 +113,41 @@ li.user-name:hover{
     padding-left: 50px;
 }
 
+
+/* MESSAGES */
+.message-container{
+    display: flex;
+}
+.message-container.sent{
+    justify-content: flex-end;
+}
+  
+.message-container.received{
+    justify-content: flex-start;
+}
+  
+.message-container.sent .message{
+    background-color: #d5f9ba;
+}
+  
+.message-container.received .message{
+    background-color: #fff;
+}
+  
+.message-container .message p{
+    margin-bottom: 0;
+}
+.message-container .message time{
+    display: block;
+    text-align: right;
+    font-size: 11px;
+    color: #aaa;
+}
+
+/* CHAT FOOTER */
+
+#chat footer [class^='col-']{
+    display: flex;
+    justify-content: center;
+}
 

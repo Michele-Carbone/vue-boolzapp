@@ -32,11 +32,11 @@
                         <div class="user-name">
                             <!--immage user-->
                             <figure>
-                                <img src="./assets/img/avatar_io.jpg" alt="Silvia Rivella" />
+                                <img :src="`./assets/img/avatar${user.avatar}.jpg`" :alt="user.name" />
                             </figure>
 
                             <!--name-->
-                            <div class="h6 user-name-text">Silvia Rivella</div>
+                            <div class="h6 user-name-text">{{ user.name }}</div>
                         </div>
 
                         <!--option user-->
@@ -73,12 +73,12 @@
                     <!--RUBRICA CHAT-->
                     <section class="flex-grow-1 overflow-auto bg-white">
                         <ul class="m-0 p-0">
-                            <li class="user-name">
+                            <li class="user-name" v-for="contact in contacts">
                                 <figure>
-                                    <img src="./assets/img/avatar_1.jpg" alt="Michele" />
+                                    <img :src="`./assets/img/avatar${contact.avatar}.jpg`" alt="contact.name" />
                                 </figure>
                                 <div class="h6 user-name-text">
-                                    <div>Michele</div>
+                                    <div>{{ contact.name }}</div>
                                 </div>
                             </li>
                         </ul>
@@ -86,26 +86,58 @@
                 </section>
 
                 <!--SEZIONE CHAT-->
-                <section id="chat" class="col-8 rounded-end d-flex flex-column bg-chat-color p-0 h-100">
+                <section id="chat" class="col-8 rounded-end d-flex flex-column bg-chat p-0 h-100">
                     <!--Nome dell utente con il quale stima messaggiando piu le tre opzioni-->
-                    <header class="bg-gray ">
-                        Pino
+                    <header class="bg-gray flex-shrink-0 d-flex justify-content-between">
+                        <div class="user-name">
+                            <figure>
+                                <img src="./assets/img/avatar_1.jpg" alt="Michele" />
+                            </figure>
+                            <div class="h6 user-name-text">
+                                <div>Michele</div>
+                                <div class="user-name-secondary-text fw-light">
+                                    <small>Ultimo accesso oggi alle</small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="me-3 d-flex text-muted align-items-center justify-content-around">
+                            <i class="fas fa-search ms-3 clickable"></i>
+                            <i class="fas fa-paperclip ms-3 clickable"></i>
+                            <i class="fas fa-ellipsis-v ms-3 clickable"></i>
+                        </div>
                     </header>
                     <!--Chat completa con i messaggi scritti al suo interno-->
                     <main class="flex-grow-1 overflow-auto bg-chat-image">
-                        <!--Messaggi sulla sinistra sono quelli che riceviamo dall'utente-->
-
-                        <!--Colore della chat bianco con all interno la data-->
-
-                        <!--Messaggi sulla destra sono quelli che scrive il proprietario della chat-->
-
-                        <!--Colore della chat verde con all interno la data-->
+                        <ul>
+                            <li class="message-container p-3 sent">
+                                <div class="message p-2 rounded-3">
+                                    <p>Hai portato a spasso il cane?</p>
+                                    <time datetime="2021-08-03T09:53">10/01/2020 - 09:53</time>
+                                </div>
+                            </li>
+                            <li class="message-container p-3 received">
+                                <div class="message p-2 rounded-3">
+                                    <p>Sì!</p>
+                                    <time datetime="2021-08-03T10:07">10/01/2020 - 10:07</time>
+                                </div>
+                            </li>
+                        </ul>
                     </main>
 
 
                     <!--Barra nella quale scriviamo il messaggio da inviare con il punsante Enter e le due opzioni vicine-->
-                    <footer class="">
-
+                    <footer class="flex-shrink-0 container-fluid">
+                        <div class="row h-100 align-items-center">
+                            <div class="col-1">
+                                <i class="far fa-smile fa-2x text-muted clickable"></i>
+                            </div>
+                            <div class="col-10">
+                                <input type="text" class="form-control" placeholder="Scrivi un messaggio" />
+                            </div>
+                            <div class="col-1">
+                                <i class="fas fa-chevron-circle-right fa-2x text-muted clickable"></i>
+                            </div>
+                        </div>
                     </footer>
                 </section>
             </div>
@@ -115,9 +147,9 @@
 
 
 
-    <!--
+    <script src="./js/data.js"></script>
     <script src="./js/script.js"></script>
-    -->
+
 </body>
 
 </html>

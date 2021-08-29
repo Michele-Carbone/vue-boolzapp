@@ -18,49 +18,58 @@
 
 <body>
     <!--sfondo sfumato della chat-->
-    <!--creazione della chat centrata-->
-    <div id="app" class="container">
-        <!--suddivisione in due colonne-->
-        <div class="row mb-2 mt-4">
-            <!--colonna piu piccola con la cronologia delle chat-->
-            <div class="col-4 bg-secondary">
-                <!--Nome dell utente con di fianco le tre opzioni-->
-                <div class="row">
-                    <div class="col-9">
-                        <img src="./assets/img/avatar_io.jpg" alt="" class="m-2"><span class="mx-1">Nome
-                            utente
-                        </span>
+    <div id="app" class="d-flex align-items-center justify-content-center h-100">
+        <!--creazione della chat centrata-->
+        <div class="container">
+
+            <main class="rounded shadow bg-white">
+                <!--suddivisione in due colonne-->
+                <div class="row h-100">
+                    <!--colonna piu piccola con la cronologia delle chat-->
+                    <div id="contacts" class="col-4">
+
+                        <!--Nome dell utente con di fianco le tre opzioni-->
+                        <!--
+                        <div class="row">
+                            <div class="col-9">
+                                <img src="./assets/img/avatar_io.jpg" alt="" class="m-2"><span class="mx-1">Nome
+                                    utente
+                                </span>
+                            </div>
+                            <div class="col-3">
+                                <i class="fas fa-circle-notch mx-1"></i>
+                                <i class="fas fa-comment-alt mx-1"></i>
+                                <i class="fas fa-ellipsis-v mx-1"></i>
+                            </div>
+                        </div>-->
+                        <!--Segnalatori di notifica-->
+                        <div></div>
+                        <!--Ricerca nelle chat-->
+                        <div></div>
+                        <!--Elenco della cronologia delle chat-->
+                        <div></div>
                     </div>
-                    <div class="col-3">
-                        <i class="fas fa-circle-notch mx-1"></i>
-                        <i class="fas fa-comment-alt mx-1"></i>
-                        <i class="fas fa-ellipsis-v mx-1"></i>
+
+                    <!--Colonna piu grande per la messaggistica della chat presa in questione-->
+                    <div id="chat" class="col-8 rounded-end">
+                        <!--Nome dell utente con il quale stima messaggiando piu le tre opzioni-->
+
+                        <!--Chat completa con i messaggi scritti al suo interno-->
+
+                        <!--Messaggi sulla sinistra sono quelli che riceviamo dall'utente-->
+
+                        <!--Colore della chat bianco con all interno la data-->
+
+                        <!--Messaggi sulla destra sono quelli che scrive il proprietario della chat-->
+
+                        <!--Colore della chat verde con all interno la data-->
+
+                        <!--Barra nella quale scriviamo il messaggio da inviare con il punsante Enter e le due opzioni vicine-->
                     </div>
                 </div>
-                <!--Segnalatori di notifica-->
-                <div></div>
-                <!--Ricerca nelle chat-->
-                <div></div>
-                <!--Elenco della cronologia delle chat-->
-                <div></div>
-            </div>
 
-            <!--Colonna piu grande per la messaggistica della chat presa in questione-->
-            <div class="col-8 bg-danger">
-                <!--Nome dell utente con il quale stima messaggiando piu le tre opzioni-->
+            </main>
 
-                <!--Chat completa con i messaggi scritti al suo interno-->
-
-                <!--Messaggi sulla sinistra sono quelli che riceviamo dall'utente-->
-
-                <!--Colore della chat bianco con all interno la data-->
-
-                <!--Messaggi sulla destra sono quelli che scrive il proprietario della chat-->
-
-                <!--Colore della chat verde con all interno la data-->
-
-                <!--Barra nella quale scriviamo il messaggio da inviare con il punsante Enter e le due opzioni vicine-->
-            </div>
         </div>
     </div>
 

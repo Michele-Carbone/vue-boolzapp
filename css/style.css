@@ -15,6 +15,13 @@ body{
     background-image: linear-gradient(to bottom, #00bfa5 15%, #f0f0f0 15%, #f0f0f0 100%);
 }
 
+main{
+    height: 90vh;
+}
+
+#chat{
+    background-color: darkgreen;
+}
 
 img{
     width: 10%;

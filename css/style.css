@@ -12,9 +12,9 @@
 body{
     font-family: sans-serif;
     height: 100vh;
-    background-color: red;
-    background-image: linear-gradient(#140042, white);
+    background-image: linear-gradient(to bottom, #00bfa5 15%, #f0f0f0 15%, #f0f0f0 100%);
 }
+
 
 img{
     width: 10%;

@@ -99,7 +99,13 @@ const app = new Vue({
     methods: {
         setCurrentContact(index) {
             this.currentContact = index;
-        }
+        },
+
+        getLastSeen() {
+            const messages = this.contacts[this.currentContact].messages;
+            const lastMessage = messages[messages.length - 1];
+            return lastMessage.date;
+        },
     },
 });
 

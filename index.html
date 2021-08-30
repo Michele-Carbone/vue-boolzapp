@@ -75,7 +75,7 @@
                         <ul class="m-0 p-0">
                             <li class="user-name" v-for="contact in contacts">
                                 <figure>
-                                    <img :src="`./assets/img/avatar${contact.avatar}.jpg`" alt="contact.name" />
+                                    <img :src="`./assets/img/avatar${contact.avatar}.jpg`" :alt="contact.name" />
                                 </figure>
                                 <div class="h6 user-name-text">
                                     <div>{{ contact.name }}</div>
@@ -91,10 +91,12 @@
                     <header class="bg-gray flex-shrink-0 d-flex justify-content-between">
                         <div class="user-name">
                             <figure>
-                                <img src="./assets/img/avatar_1.jpg" alt="Michele" />
+                                <!--abbiamo deciso arbitrariamente di scegliere il primo contatto-->
+                                <img :src="`./assets/img/avatar${contacts[currentContact].avatar}.jpg`"
+                                    :alt="contacts[currentContact].name" />
                             </figure>
                             <div class="h6 user-name-text">
-                                <div>Michele</div>
+                                <div>{{ contacts[currentContact].name }}</div>
                                 <div class="user-name-secondary-text fw-light">
                                     <small>Ultimo accesso oggi alle</small>
                                 </div>
@@ -109,18 +111,14 @@
                     <!--Chat completa con i messaggi scritti al suo interno-->
                     <main class="flex-grow-1 overflow-auto bg-chat-image">
                         <ul>
-                            <li class="message-container p-3 sent">
+                            <li v-for="message in contacts[currentContact].messages" :class="message.status"
+                                class="message-container p-3 sent">
                                 <div class="message p-2 rounded-3">
-                                    <p>Hai portato a spasso il cane?</p>
-                                    <time datetime="2021-08-03T09:53">10/01/2020 - 09:53</time>
+                                    <p>{{ message.message }}</p>
+                                    <time>{{ message.date }}</time>
                                 </div>
                             </li>
-                            <li class="message-container p-3 received">
-                                <div class="message p-2 rounded-3">
-                                    <p>Sì!</p>
-                                    <time datetime="2021-08-03T10:07">10/01/2020 - 10:07</time>
-                                </div>
-                            </li>
+
                         </ul>
                     </main>
 
@@ -145,9 +143,6 @@
         </div>
     </div>
 
-
-
-    <script src="./js/data.js"></script>
     <script src="./js/script.js"></script>
 
 </body>

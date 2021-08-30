@@ -96,7 +96,11 @@ const app = new Vue({
             },
         ],
     },
-    methods: {},
+    methods: {
+        setCurrentContact(index) {
+            this.currentContact = index;
+        }
+    },
 });
 
 

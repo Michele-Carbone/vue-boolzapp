@@ -73,7 +73,8 @@
                     <!--RUBRICA CHAT-->
                     <section class="flex-grow-1 overflow-auto bg-white">
                         <ul class="m-0 p-0">
-                            <li class="user-name" v-for="contact in contacts">
+                            <li class="user-name" v-for="(contact, index) in contacts"
+                                @click="setCurrentContact(index)">
                                 <figure>
                                     <img :src="`./assets/img/avatar${contact.avatar}.jpg`" :alt="contact.name" />
                                 </figure>

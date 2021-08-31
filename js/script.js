@@ -6,6 +6,7 @@ const app = new Vue({
     el: '#app',
     data: {
         currentContact: 0,
+        newMessage: '',
         user: {
             name: 'Nuovo Nome',
             avatar: '_io',
@@ -103,8 +104,24 @@ const app = new Vue({
 
         getLastSeen() {
             const messages = this.contacts[this.currentContact].messages;
-            const lastMessage = messages[messages.length - 1];
+            const receivedMessage = messages.filter(message => message.status === 'received');
+            const lastMessage = receivedMessage[receivedMessage.length - 1];
             return lastMessage.date;
+        },
+
+        sendMessage() {
+            if (!this.newMessage) return;
+
+            const newMessage = {
+                status: 'sent',
+                message: this.newMessage,
+                date: dayjs().format("DD/MM/YYYY HH:mm:ss"),
+            };
+
+            //aggiungere il messaggio al currentContact
+            this.contacts[this.currentContact].messages.push(newMessage);
+
+            this.newMessage = '';
         },
     },
 });
